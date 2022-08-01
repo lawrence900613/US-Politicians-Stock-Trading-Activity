@@ -40,10 +40,10 @@
             <p>View the existing billvote inforamtion for each politician</p>
             
             <h3><a href="./filter_billvote_politician.php">Search politician_billvote</a></h3>
-            <p>Seach for the information of politician who vote the specific bill</p>
+            <p>Search for the information of politician who vote the specific bill</p>
             
             <h3><a href="./politician_vote_all_bill.php">Politician vote all bill</a></h3>
-            <p>Seach for the information of politician who vote all the bill in database</p>
+            <p>Search for the information of politician who vote all the bill in database</p>
             
         </div>
     </div>

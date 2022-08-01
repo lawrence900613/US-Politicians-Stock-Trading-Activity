@@ -28,7 +28,7 @@
         <h1>Transaction record database</h2>
         <div class="GreyBox">
             <h3><a href="./insert_transaction.php">Add transaction</a></h3>
-            <p>Insert the transaction record, the politicain and stock information must add before adding it</p>
+            <p>Insert the transaction record, the politician and stock information must add before adding it</p>
             
             <h3><a href="./view_transaction.php">View transaction</a></h3>
             <p>View all existing transaction record</p>
@@ -37,7 +37,7 @@
             <p>Find the information of politician who bought specific stock before</p>
             
             <h3><a href="./politician_stock_count.php">Count stock with politician </a></h3>
-            <p>Find the time of transaction in stock with politician</p>
+            <p>Count the number of times a politician bought a specific stock</p>
             
             <h3><a href="./transaction_avg_count.php">Average times of transaction </a></h3>
             <p>Find the average number of transaction per politician</p>

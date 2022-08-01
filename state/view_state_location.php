@@ -1,13 +1,19 @@
 <?php
     $myPDO = new PDO('pgsql:host=localhost;dbname=CMPT354', 'ubuntu', 'password');
 
-    try{
-        $result = $myPDO->query("SELECT sl.statename, sl.location, sl.dominantparty, st.timezone FROM statelocation sl JOIN statetimezone st on st.location = sl.location");
+    $temp = "";
+    foreach($_POST["state"] AS $index => $option) {
+        
+      $temp .= $option;
+    }
+
+    try{ //sl.statename, sl.location, sl.dominantparty, st.timezone
+        $result = $myPDO->query("SELECT statename $temp FROM statelocation sl JOIN statetimezone st on st.location = sl.location");
   
-      }catch (Exception $e) {
+    }catch (Exception $e) {
           echo 'Caught exception: ',  $e->getMessage(), "\n";
-      }
-?>
+    }
+?> 
 <!DOCTYPE html>
 <html lan="en">
 
@@ -36,27 +42,6 @@
         <div class="GreyBox">
 
             <table class="AddTable" id="Table">
-                <h2> State </h2>
-                        <thead>
-                            <tr class="RowOne">
-                                <th>Location</th>
-                                <th>Party</th>
-                                <th>Timezone</th>
-                            </tr>
-                        </thead>
-                        <form id = "rec-form" action="view_state_location.php" method="post">
-                            <tbody>
-                                <tr>
-                                    <td><input type="checkbox" name= "state[]" value=",st.location"></td>  
-                                    <td><input type="checkbox" name= "state[]" value=",dominantparty"></td>  
-                                    <td><input type="checkbox" name= "state[]" value=",timezone"></td>
-                                </tr>
-                            </tbody>
-                        </form>    
-                    </table>
-                    <input type="submit" value="Submit" class="btn" form="rec-form">
-
-                <!-- <table class="TableFormat" id="Table">
 
                 <thead>
                     <tr class="RowOne">
@@ -79,7 +64,7 @@
                 
                 <?php
                     }
-                  ?> -->
+                  ?>
                   
             </table>
         </div>
