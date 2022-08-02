@@ -37,8 +37,8 @@
                     <tr class="RowOne">
                             <th>Name</th>
                             <th>DOB</th>
-                            <th>Role</th>
                             <th>Party</th>
+                            <th>Role</th>
                             <th>StateName</th>
                     </tr>
                 </thead>
